@@ -1,0 +1,23 @@
+package com.ogutcenali;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Ogrenci> ogrenciListesi = new ArrayList<Ogrenci>();
+		
+		try(Scanner sc = new Scanner(new FileReader("liste.txt"))){  //satır satır okumayı sağlayacak.
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı..");
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,34 @@
+package com.ogutcenali;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class BufferedReaderOrnek2 {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Ogrenci> ogrenciListesi = new ArrayList<>();
+		
+		
+		try(Scanner sc = new Scanner(new BufferedReader(new FileReader("ogrenciler.txt")))) {
+			
+			
+			while(sc.hasNextLine()) {
+				
+				String okunan = sc.nextLine();
+				System.out.println(okunan);
+			}
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya bulunamadı..");
+		}
+
+	}
+
+}

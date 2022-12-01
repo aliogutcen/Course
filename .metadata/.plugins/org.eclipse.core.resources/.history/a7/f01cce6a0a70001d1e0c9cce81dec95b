@@ -1,0 +1,72 @@
+package com.ogutcenali;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.annotation.processing.AbstractProcessor;
+
+public class MainDosyadanOkuma {
+	
+	
+public static void dosyadanTekBirByteOkuma() {
+		
+		FileInputStream fis = null;
+
+		try {
+			fis = new FileInputStream("dosya.txt");
+			 
+			char c = (char) fis.read(); 
+			System.out.println(c);
+			char c2 = (char) fis.read();
+			System.out.println(c2);
+		
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı..");
+		} catch (IOException e) {
+			System.out.println("Okuma Hatası Aldık..");
+		}
+		
+	}
+
+	
+public static void dosyadanOrtasindanByteOkuma() {
+	
+	FileInputStream fis = null;
+
+	try {
+		fis = new FileInputStream("dosya3.txt");
+		 
+	
+	
+	} catch (FileNotFoundException e) {
+		System.out.println("Dosya Bulunamadı..");
+	} catch (IOException e) {
+		System.out.println("Okuma Hatası Aldık..");
+	}finally {
+		if(fis!= null) {
+			try {
+				fis.close();
+			} catch (IOException e) {
+				System.out.println("Dosya kapatılırken hata oluştu..");
+			}
+		}
+	}
+	
+}
+	
+	
+	
+	public static void main(String[] args) {
+
+		dosyadanTekBirByteOkuma();
+		
+		
+		
+		
+
+		System.out.println("Hoşçakalın");
+
+	}
+
+}

@@ -1,0 +1,28 @@
+package com.ogutcenali;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BufferedReaderOrnek1 {
+
+	public static void main(String[] args) {
+		
+		try(BufferedReader br = new BufferedReader(new FileReader("liste.txt"))){
+			
+			String s = br.readLine();
+			System.out.println(s);
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya bulunamadı");
+		} catch (IOException e) {
+			System.out.println("I/O hatası");
+		}
+		
+
+	}
+
+}

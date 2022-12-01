@@ -1,0 +1,19 @@
+
+w
+java:S1128"DRemove this unused import 'javax.swing.tree.FixedHeightLayoutCache'.(∞‘¡«8‚ì°ÓÃ0H∂
+RMINORZ
+CODE_SMELL
+s	java:S125"<This block of commented-out lines of code should be removed.(‰è∆¡˘ˇˇˇˇ8‚ì°ÓÃ0H∏
+RMAJORZ
+CODE_SMELL
+s
+java:S1128";Remove this unused import 'java.util.concurrent.Executors'.(‰Â“€ˇˇˇˇˇ8‚ì°ÓÃ0H¡
+RMINORZ
+CODE_SMELL
+y
+java:S1128"ARemove this unused import 'java.util.concurrent.ExecutorService'.(Ê˜ñ£˘ˇˇˇˇ8‚ì°ÓÃ0H√
+RMINORZ
+CODE_SMELL
+n	java:S125"<This block of commented-out lines of code should be removed.(Ï§ß‘8Ö‘ÖÌÃ0H≈
+RMAJORZ
+CODE_SMELL

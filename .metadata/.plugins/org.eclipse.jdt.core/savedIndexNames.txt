@@ -1,0 +1,9 @@
+INDEX VERSION 1.131+C:\Users\PC\Desktop\ZeroToMaster\.metadata\.plugins\org.eclipse.jdt.core
+3636342951.index
+2334603356.index
+1352294093.index
+3273484465.index
+1865797976.index
+2426422044.index
+4186556454.index
+2876294074.index

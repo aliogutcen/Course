@@ -1,0 +1,63 @@
+package example1;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+public class Main {
+
+	
+	public static void dosyaOku() {
+		
+		
+		try(Scanner sc = new Scanner(new FileReader("dosya1.txt"))){
+			
+			
+			while(sc.hasNextLine()) {
+				
+				String okunan = sc.nextLine();
+				
+				System.out.println(okunan);
+				
+			}
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+	try(FileWriter fw = new FileWriter("dosya1.txt")){
+		
+		fw.write("Ali Ogutcen,43151,215");
+		
+		
+		
+		
+		
+		
+	} catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		dosyaOku();
+	}
+
+}

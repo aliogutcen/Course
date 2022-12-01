@@ -1,0 +1,37 @@
+
+c
+java:S1128"0Remove this unused import 'java.nio.file.Files'.(‚ƒü8’ùÜĞÌ0HRMINORZ
+CODE_SMELL
+i
+java:S1135("2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8÷¿ãĞÌ0H¯RINFOZ
+CODE_SMELL
+]
+java:S14813"*Remove this unused "index" local variable.(ìüà·8üÑ¯ĞÌ0H§RMINORZ
+CODE_SMELL
+i
+java:S1135V"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ÓéæÏÌ0HRINFOZ
+CODE_SMELL
+v
+java:S1128">Remove this unused import 'java.time.chrono.MinguoChronology'.(›ùæ°úÿÿÿÿ8’ùÜĞÌ0H”RMINORZ
+CODE_SMELL
+c
+java:S1128
+"0Remove this unused import 'java.nio.file.Paths'.(áè°¯8’ùÜĞÌ0H’RMINORZ
+CODE_SMELL
+b
+java:S1128	"/Remove this unused import 'java.nio.file.Path'.(×²êÂ8’ùÜĞÌ0HRMINORZ
+CODE_SMELL
+…	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(åÕĞÑHRMINORZ
+CODE_SMELL
+c
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8’ùÜĞÌ0H–RMINORZ
+CODE_SMELL
+b
+java:S1481"*Remove this unused "satir" local variable.(€¡¾»ùÿÿÿÿ8•ÕÕĞÌ0HğRMINORZ
+CODE_SMELL
+i
+java:S1135H"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8üÑ¯ĞÌ0H¢RINFOZ
+CODE_SMELL
+m
+java:S1128"5Remove this unused import 'java.nio.charset.Charset'.(ü¶ØŸıÿÿÿÿ8’ùÜĞÌ0HŒRMINORZ
+CODE_SMELL

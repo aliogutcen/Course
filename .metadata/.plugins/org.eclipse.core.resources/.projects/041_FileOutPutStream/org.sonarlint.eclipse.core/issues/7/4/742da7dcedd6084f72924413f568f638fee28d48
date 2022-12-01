@@ -1,0 +1,10 @@
+
+g	java:S125"<This block of commented-out lines of code should be removed.(ª™‘ÆH¼RMAJORZ
+CODE_SMELL
+w	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(îÿEH»RMINORZ
+CODE_SMELL
+^
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿH¹RCRITICALZ
+CODE_SMELL
+l	java:S125"<This block of commented-out lines of code should be removed.(£ÉïÆûÿÿÿÿH¸RMAJORZ
+CODE_SMELL

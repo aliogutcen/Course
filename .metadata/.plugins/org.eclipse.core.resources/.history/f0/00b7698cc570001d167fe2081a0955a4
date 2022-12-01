@@ -1,0 +1,31 @@
+package com.ogutcenali;
+
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class TryWithResources {
+
+	/*
+	 * TRY-WITH-RESOURCES KULLANIMI
+	 * 
+	 * Closeable interfacesini implements eden herhangi bir sınıfı
+	 * trt-with-resources ile kullanabiliriz. Bu şekilde extra finally kod bloğu
+	 * yazmak zorunda kalmayız. JAVA-7 ile birlikte geldi.
+	 * 
+	 */
+
+	public static void main(String[] args) {
+
+		try (FileWriter fw = new FileWriter("markalar.txt")) {
+
+			
+			
+			
+			
+		} catch (IOException e) {
+			System.out.println("I/O Exception aldık");
+		}
+
+	}
+
+}

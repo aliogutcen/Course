@@ -1,0 +1,145 @@
+package example2;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import example.Ogrenci;
+
+public class Main {
+
+	
+	/*	
+	 *											FileWriter-FileReader  
+	 *
+	 *			1.Uygulama elimizde dosya yok -> dosyaya veri yazalım daha sonra okuyalım.
+	 *			2.Elimizde .txt içinde elemanlar olsun biz bunu listeye atalım / daha sonra o listeyi yeni bir dosyaya yükleyelim
+	 *
+	 *
+	 */
+	
+	static ArrayList<Ogrenciler> ogrenciListesi = new ArrayList<>();
+	
+	
+	
+	public static void ogrencileriOkuVeListeyeYaz() {
+		
+	try(Scanner sc = new Scanner(new FileReader("notlar.txt"))){
+		
+		while(sc.hasNextLine()) {
+			
+		String okunan = sc.nextLine();
+		String[] arr = okunan.split(",");
+		int vize1= Integer.parseInt(arr[1].trim());
+		int vize2= Integer.parseInt(arr[2].trim());
+		int vize3= Integer.parseInt(arr[3].trim());
+		int ortalama = (vize1+vize2+vize3)/3;
+		
+		ogrenciListesi.add(new Ogrenciler (arr[0], ortalama));
+	
+		}
+	
+		for (Ogrenciler ogrenciler : ogrenciListesi) {
+			System.out.println(ogrenciler);
+		}
+		
+		
+		
+		
+		
+	} catch (FileNotFoundException e) {
+		System.out.println("Dosya Bulunamadı...");
+	}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	public static void kaldiMi() {
+		
+		try(FileWriter fw = new FileWriter("notlarHesaplandi.txt")){
+			
+			
+			
+		} catch (IOException e) {
+			System.out.println("I/O Hatası");
+		}
+		
+		
+		
+	}
+	
+	
+	public static void dosyaOkuma() {
+		
+		try(Scanner sc = new Scanner(new FileReader("arabalar.txt")))
+		
+		{
+			while(sc.hasNextLine()) {
+				
+				String okunan = sc.nextLine();
+				
+				System.out.println(okunan);
+				
+				
+				
+			}
+			
+			
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı");
+		}
+		
+		
+		
+		
+	}
+	
+	
+	public static void dosyaYazma() {
+		
+		try( FileWriter fw = new FileWriter("arabalar.txt")){
+			
+			
+			fw.write("ahmet\n");
+			fw.write("mehmet\n");
+			fw.write("mert\n");
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		ogrencileriOkuVeListeyeYaz();
+	
+	}
+
+}

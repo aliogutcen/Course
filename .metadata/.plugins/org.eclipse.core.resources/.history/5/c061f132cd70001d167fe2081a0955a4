@@ -1,0 +1,79 @@
+package example;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+	static ArrayList<Ogrenci> notPuanlari = new ArrayList<>();
+	
+	public static void ortalamaHesaplama() {
+		
+
+		try(Scanner sc = new Scanner(new FileReader("dosya.txt")))
+		{
+			
+			while(sc.hasNextLine()) {
+				
+				String okunan= sc.nextLine();
+				String[] arr = okunan.split(",");
+				
+				int vize1= Integer.parseInt(arr[1]);
+				int vize2= Integer.parseInt(arr[2]);
+				int vize3= Integer.parseInt(arr[3]);
+				int ortalama = (vize1+vize2+vize3)/3;
+				notPuanlari.add(new Ogrenci(arr[0], ortalama));
+				
+			}
+			
+			for (Ogrenci ogrenci : notPuanlari) {
+				System.out.println(ogrenci);
+			}
+		
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı..");
+		}
+		
+	}
+	
+	
+	
+	public static void gecenler() {
+		
+		
+		try(FileWriter fw = new FileWriter("gecenler.txt"))
+		{
+			
+			
+			for (Ogrenci ogrenci : notPuanlari) {
+				
+				if(ogrenci.getId()>50) {
+					fw.write(ogrenci.getAdSoyad() +"\n dersi geçti");
+				}
+				
+			}
+			
+			
+			
+		} catch (IOException e) {
+			System.out.println("I/O");
+		}
+		
+		
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		ortalamaHesaplama();
+		gecenler();
+	}
+
+}

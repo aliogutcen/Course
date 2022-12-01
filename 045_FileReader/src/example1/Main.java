@@ -1,0 +1,93 @@
+package example1;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.time.chrono.MinguoChronology;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	private static final String ACTION_1 = "dosya1.txt";  
+	public static void kacKarakterVarTopla() {
+		
+		try (Scanner sc = new Scanner(new FileReader(ACTION_1))){
+			String okunan= "";
+			int satir =0;
+			int toplamCharSayisi=0;
+			while(sc.hasNextLine()) {
+					okunan= sc.nextLine();
+					
+					String[] arr = okunan.split(";");
+					
+			for (int i = 0; i < arr.length; i++) {
+				toplamCharSayisi= arr[i].length()+toplamCharSayisi;
+			}
+				
+			}
+			
+			System.out.println("Toplam char toplamı= " + toplamCharSayisi);
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+	
+	
+	public static void dosyaOku() {
+
+		try (Scanner sc = new Scanner(new FileReader(ACTION_1))) {
+
+				int index = 0;
+
+				while (sc.hasNextLine()) {
+
+				String okunan = sc.nextLine();
+
+				String[] arr = okunan.split(",");
+				int a = arr[0].length();
+
+				for (int i = 1; i < arr.length; i++) {
+
+					if (arr[i].length() > a) {
+						a = arr[i].length();
+						index = i - 1;
+					}
+
+				}
+
+			}
+
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+	public static void main(String[] args) {
+
+		try (FileWriter fw = new FileWriter(ACTION_1)) {
+
+			fw.write("Ali Ogutcen,43151,215\n");
+			fw.write("Kübra Ogutcen,412512,1215");
+
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		dosyaOku();
+		kacKarakterVarTopla();
+	}
+
+}

@@ -1,0 +1,13 @@
+
+f
+java:S1481#"3Remove this unused "ogrenciListesi" local variable.(äÓòÑ8¶‹ìÌ0H	RMINORZ
+CODE_SMELL
+w
+java:S2147"DCombine this catch with the one at line 23, which has the same body.(ï­£Ä8ÿş•ìÌ0Hˆ	RMINORZ
+CODE_SMELL
+i
+java:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ÿş•ìÌ0HŠ	RINFOZ
+CODE_SMELL
+i
+java:S1135"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8ÿş•ìÌ0H‹	RINFOZ
+CODE_SMELL

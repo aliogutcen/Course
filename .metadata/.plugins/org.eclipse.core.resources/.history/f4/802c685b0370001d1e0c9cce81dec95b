@@ -1,0 +1,10 @@
+package com.ogutcenali;
+
+public class MainDosyayaYazma_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

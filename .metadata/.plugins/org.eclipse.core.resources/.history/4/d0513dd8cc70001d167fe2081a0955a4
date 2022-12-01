@@ -1,0 +1,44 @@
+package example;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		ArrayList<Ogrenci> notPuanlari = new ArrayList<>();
+
+		try(Scanner sc = new Scanner(new FileReader("dosya.txt")))
+		{
+			
+			while(sc.hasNextLine()) {
+				
+				String okunan= sc.nextLine();
+				String[] arr = okunan.split(",");
+				
+				int vize1= Integer.parseInt(arr[1]);
+				int vize2= Integer.parseInt(arr[2]);
+				int vize3= Integer.parseInt(arr[3]);
+				int ortalama = (vize1+vize2+vize3)/3;
+				notPuanlari.add(new Ogrenci(arr[0], ortalama));
+				
+			}
+			
+			for (Ogrenci ogrenci : notPuanlari) {
+				System.out.println(ogrenci);
+			}
+		
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı..");
+		}
+		
+		
+	}
+
+}

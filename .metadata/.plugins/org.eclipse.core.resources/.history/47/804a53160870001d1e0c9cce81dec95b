@@ -1,0 +1,44 @@
+package com.ogutcenali;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class MainDosyadanOkuma {
+
+	public static void main(String[] args) {
+		
+		FileInputStream fis = null;
+		
+		try {
+			fis = new FileInputStream("dosya.txt");
+			
+			
+			
+			
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			System.out.println("Dosya Bulunamadı..");
+		}
+		
+		
+		
+		
+		System.out.println("Hoşçakalın");
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

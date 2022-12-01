@@ -1,0 +1,10 @@
+package com.ogutcenali;
+
+public class MainDosyadanOkuma {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

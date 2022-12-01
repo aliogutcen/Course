@@ -1,0 +1,19 @@
+package com.ogutcenali;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ArrayList<Ogrenci> ogrenciListesi = new ArrayList<Ogrenci>();
+		
+		try(Scanner sc = new Scanner(new FileReader("liste.txt"))){
+			
+		}
+		
+
+	}
+
+}

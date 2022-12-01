@@ -1,0 +1,71 @@
+package example2;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+	
+	/*	
+	 *									FileWriter-FileReader  
+	 *
+	 *			1.Uygulama elimizde dosya yok -> dosyaya veri yazalım daha sonra okuyalım.
+	 *
+	 */
+	
+	
+	public static void dosyaOkuma() {
+		
+		try(Scanner sc = new Scanner(new FileReader("arabalar.txt"))){
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+	}
+	
+	
+	public static void dosyaYazma() {
+		
+		try( FileWriter fw = new FileWriter("arabalar.txt",true)){
+			
+			
+			fw.write("ahmet");
+			fw.write("mehmet");
+			fw.write("mert");
+			
+			
+			
+			
+			
+			
+			
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+
+		dosyaYazma();
+		
+
+	}
+
+}

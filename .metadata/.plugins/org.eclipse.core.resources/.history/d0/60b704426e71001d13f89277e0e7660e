@@ -1,0 +1,67 @@
+package com.ogutcenali;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class BufferedReaderOrnek1 {
+
+	public static void dosyadanBirSatirOku() {
+		try(BufferedReader br = new BufferedReader(new FileReader("liste.txt"))){
+			
+			/*
+			 * Dosyanın bir satırını okumak için
+			 * 
+			 */
+				String s = br.readLine();
+				System.out.println(s);
+				
+			} catch (FileNotFoundException e) {
+				System.out.println("Dosya bulunamadı");
+			} catch (IOException e) {
+				System.out.println("I/O hatası");
+			}
+			
+		
+	}
+	
+	
+	public static void tamaminiOkumak() {
+		
+		try(BufferedReader br = new BufferedReader(new FileReader("liste.txt"))){
+			
+			/*
+			 * 	Dosyanın tamamaını okumak için 
+			 * .readLine() ;  return olarak null döndüğü için
+			 * while döngüsü ile s'i atatıgımızda null olmayana kadar yazmaya devam. eder null olursa döngüden cıkar
+			 * 
+			 */
+				
+			String s = null ;
+			while( (s = br.readLine())!= null) {
+				
+				System.out.println(s);
+				
+			}
+				
+			} catch (FileNotFoundException e) {
+				System.out.println("Dosya bulunamadı");
+			} catch (IOException e) {
+				System.out.println("I/O hatası");
+			}
+		
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		
+		tamaminiOkumak();
+			
+		
+		
+
+	}
+
+}

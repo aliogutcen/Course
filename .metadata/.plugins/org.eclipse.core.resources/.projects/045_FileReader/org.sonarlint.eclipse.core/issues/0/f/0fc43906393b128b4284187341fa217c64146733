@@ -1,0 +1,16 @@
+
+d
+java:S1128
+",Remove this unused import 'example.Ogrenci'.(”İ×šúÿÿÿÿ8É»ÒÌ0HğRMINORZ
+CODE_SMELL
+Š	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ïÁÀÜúÿÿÿÿHòRMINORZ
+CODE_SMELL
+i
+java:S1135D"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8µİ¾ÑÌ0HóRINFOZ
+CODE_SMELL
+i
+java:S1135i"2Complete the task associated to this TODO comment.(ÕÌ®şÿÿÿÿ8»¾üÕÌ0HôRINFOZ
+CODE_SMELL
+]
+java:S1481;"+Remove this unused "okunan" local variable.(ŸññC8»¾üÕÌ0HõRMINORZ
+CODE_SMELL
